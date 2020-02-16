@@ -16,4 +16,4 @@ docker run --group-add audio \
   -p=$PORT:$PORT \
   -v $PWD:/home/node/project \
   --rm -it --entrypoint /usr/bin/code \
-  ntopus/dev-image-chrome-vscode-node:lts -w .
+  ntopus/dev-image-chrome-vscode-node:lts -w /home/node/project
