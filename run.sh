@@ -15,5 +15,5 @@ docker run --group-add audio \
   --net=host \
   -p=$PORT:$PORT \
   -v $PWD:/home/node/project \
-  --rm -it --entrypoint /usr/bin/code \
-  ntopus/dev-image-chrome-vscode-node:lts -w /home/node/project
+  --rm -it --entrypoint /bin/bash \
+  ntopus/dev-image-chrome-vscode-node:lts -c "google-chrome --no-sandbox & /usr/bin/code -w /home/node/project"
